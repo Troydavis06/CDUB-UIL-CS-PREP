@@ -14,7 +14,7 @@ CDUB-UIL-CS-PREP is a database-driven web application designed to help students 
 
   **Clone the repository:**  
    ```sh
-   git clone https://github.com/yourusername/CDUB-UIL-CS-PREP.git
+   git clone https://github.com/troydavis06/CDUB-UIL-CS-PREP.git
    cd CDUB-UIL-CS-PREP
 
 More instillation information coming soon.
