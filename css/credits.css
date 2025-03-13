@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Reset and global styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #eeeeee;
+    height: 100vh;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    text-align: center;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+body {
+    margin: 0;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 12%; 
+    background: #550000;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.logo:hover {
+    text-shadow: 0 0 25px white, 0 0     50px white;
+    transform: scale(1.1);
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: 0.3s ease;
+}
+
+.navbar a.hover, .navbar a.active {
+    border-bottom: 3px solid white;
+}
+
+/* Button styles */
+.login-btn {
+    border: 2px solid white;
+    padding: 2px 12px;
+    border-radius: 15px;
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #550000;
+    box-shadow: 0 0 10px white, 0 0 10px white;
+    transform: scale(1.05);
+}
+
+.credits-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.692);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300%; 
+}
+
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.member-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #550000;
+}
+
+.member-info p {
+    font-size: 1em;
+    color: #666;
+}
+
+.member-info {
+    text-align: left;
+}

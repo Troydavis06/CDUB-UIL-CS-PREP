@@ -1,0 +1,245 @@
+/* General page styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2C2C2C;
+    color: #EEEEEE;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #550000;
+    color: #fff;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed ul li a {
+    visibility: hidden;
+}
+
+.sidebar .sidebar-header {
+    padding: 20px;
+    background: #550000;
+    text-align: center;
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.sidebar ul li a {
+    position: relative;
+    padding: 10px;
+    font-size: 18px;
+    display: inline-block; 
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Underline animation only for non-logout links */
+.sidebar ul li a:not(.btn-logout)::after {
+    content: '';
+    position: absolute;
+    width: 100%; 
+    height: 2px;
+    bottom: .5px; 
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: center; 
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li a:not(.btn-logout):hover::after {
+    transform: scaleX(1); 
+}
+
+.sidebar ul li .btn-logout {
+    background-color: #E74C3C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none; 
+    display: block;
+    transition: background-color 0.3s;
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px; 
+    width: calc(100% - 80px); 
+}
+
+.sidebar ul li .btn-logout:hover {
+    background-color: #C0392B;
+    text-decoration: none; 
+}
+
+
+/* 
+.sidebar ul li .btn-logout {
+    background-color: #E74C3C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    position: absolute; 
+    bottom: 20px; 
+    left: 20px; 
+    width: calc(100% - 40px); 
+}
+
+.sidebar ul li .btn-logout:hover {
+    background-color: #C0392B;
+} 
+
+/* Vertical line to toggle the sidebar */
+.sidebar-toggle {
+    position: absolute;
+    top: 50%;
+    left: 260px;
+    width: 6px;
+    height: 50px;
+    background-color: #800000; /* Maroon color */
+    cursor: pointer;
+    transition: left 0.3s, background-color 0.3s, opacity 0.3s;
+}
+
+.sidebar-toggle:hover {
+    background-color: #550000; /* Darker maroon on hover */
+}
+
+.sidebar.collapsed ~ .sidebar-toggle {
+    left: 15px;
+}
+
+.sidebar-toggle {
+    opacity: 1; /* Initially visible */
+    transition: opacity 0.75s ease;
+}
+
+/* Page content area */
+.content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    margin-left: 250px;
+    background-color: #eee;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.content .content-wrapper {
+    margin: 20px;
+}
+
+.content h1, .content h3, .content p {
+    color: #550000;
+}
+    
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 24px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.sidebar.collapsed + .sidebar-toggle + .content {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures that borders between cells are collapsed */
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #ddd; /* Table border */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd; /* Cell borders */
+}
+
+th {
+    background-color: #550000;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td {
+    background-color: #f9f9f9;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Style for buttons inside the table */
+a.btn-difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #550000;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn-difficulty:hover {
+    background-color: #990000;
+}
+
+/* Style for table row background colors based on hover and interaction */
+tbody tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+tbody td:first-child {
+    color: black; /* Change the text color to black */
+    font-weight: bold; /* You can make the text bold, if desired */
+}
